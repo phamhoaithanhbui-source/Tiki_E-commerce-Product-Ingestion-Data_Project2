@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54088097-86ea-45ab-9dd9-9a64c0038be7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Tiki-Ecommerce-Product-Ingestion-Data.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/input/product_ids.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/errorfile/errors_001.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/jsonfile/products_001.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/pipeline.log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__retry_errors__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fetcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/writer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
