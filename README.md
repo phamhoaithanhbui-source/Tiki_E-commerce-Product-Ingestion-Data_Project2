@@ -102,8 +102,8 @@ tiki-data-pipeline/
 │   ├── fetcher.py
 │   ├── transformer.py
 │   ├── writer.py
-│   ├── main.py
-│   └── retry.py
+│   ├── __main__.py
+│   └── __retry_errors__.py
 │
 ├── requirements.txt
 └── README.md
@@ -167,7 +167,7 @@ python src/__main__.py
 ### 4️) Retry failed records (optional)
 
 ```
-python src/__retry_eror__.py
+python src/__retry_erorrs__.py
 ```
 
 ---
