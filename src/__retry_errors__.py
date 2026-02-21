@@ -4,7 +4,7 @@ import asyncio
 from fetcher import fetch_batch
 from transformer import clean_description
 from writer import write_success, write_error
-from config import ERROR_DIR, BATCH_SIZE, SLEEP_BETWEEN_BATCH
+from config import ERROR_DIR, BATCH_SIZE,  SLEEP_BETWEEN_BATCH, RETRY_SUCCESS_DIR, RETRY_ERROR_DIR
 
 def transform_product(product):
     return {

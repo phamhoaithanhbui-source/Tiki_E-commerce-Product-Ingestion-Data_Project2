@@ -35,3 +35,9 @@ SUCCESS_DIR = "data/processed/jsonfile"
 ERROR_DIR = "data/processed/errorfile"
 
 LOG_FILE = "logs/pipeline.log"
+
+# =========================
+# RETRY ERROR
+# =========================
+RETRY_SUCCESS_DIR= "data/processed/jsonfile"
+RETRY_ERROR_DIR = "data/processed/errorfile"

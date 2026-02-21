@@ -83,6 +83,6 @@ async def run_pipeline():
 
     print("Pipeline completed successfully!")
 
-
 if __name__ == "__main__":
-    asyncio.run(run_pipeline())
+  asyncio.run(run_pipeline())
+

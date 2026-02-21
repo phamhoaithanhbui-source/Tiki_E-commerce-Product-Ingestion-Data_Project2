@@ -101,5 +101,6 @@ async def fetch_batch(product_ids):
             chunk_results = await asyncio.gather(*tasks)
 
             results.extend(chunk_results)
+      
 
         return results
