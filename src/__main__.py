@@ -1,13 +1,16 @@
 import asyncio
 import pandas as pd
+import os
 import time
 from fetcher import fetch_batch
+from src.config import SUCCESS_DIR
 from transformer import clean_description
 from writer import write_success, write_error
 from config import (
     BATCH_SIZE,
     INPUT_FILE,
-    SLEEP_BETWEEN_BATCH
+    SLEEP_BETWEEN_BATCH,
+    SUCCESS_DIR
 )
 
 
@@ -56,6 +59,14 @@ async def process_batch(batch_ids, batch_number):
     print(f"   --- Success: {len(success_data)}")
     print(f"   @@@ Failed: {len(error_data)}")
 
+    #checkpoint
+def batch_already_processed(batch_number):
+    file_path = os.path.join(
+    SUCCESS_DIR,
+    f"products_{batch_number:03}.json"
+    )
+    return os.path.exists(file_path)
+
 
 async def run_pipeline():
     print("Reading product IDs...")
@@ -73,6 +84,12 @@ async def run_pipeline():
 
     for start in range(0, len(ids), BATCH_SIZE):
         batch_ids = ids[start:start + BATCH_SIZE]
+
+        # RESUME LOGIC
+        if batch_already_processed(batch_number):
+            print(f"⏭ Skipping batch {batch_number} (already processed)")
+            batch_number += 1
+            continue
 
         await process_batch(batch_ids, batch_number)
 
