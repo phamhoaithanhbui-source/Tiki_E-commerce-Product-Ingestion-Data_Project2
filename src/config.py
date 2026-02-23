@@ -1,11 +1,13 @@
 # =========================
 # API CONFIGURATION
 # =========================
-
+from fake_useragent import UserAgent
+UserAgent()
+ua = UserAgent()
 BASE_URL = "https://api.tiki.vn/product-detail/api/v1/products/{}"
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0",
+headers = {
+    "User-Agent": ua.random,
     "Accept": "application/json",
 }
 

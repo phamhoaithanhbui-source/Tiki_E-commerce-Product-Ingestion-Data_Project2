@@ -2,11 +2,12 @@ import aiohttp
 import asyncio
 from config import (
     BASE_URL,
-    HEADERS,
+    headers,
     REQUEST_TIMEOUT,
     MAX_RETRIES,
     CONCURRENCY_LIMIT,
-    CHUNK_SIZE
+    CHUNK_SIZE, ua,
+
 )
 
 SEM = asyncio.Semaphore(CONCURRENCY_LIMIT)
@@ -14,13 +15,19 @@ SEM = asyncio.Semaphore(CONCURRENCY_LIMIT)
 async def fetch_product(session, product_id, retries=3):
     url = BASE_URL.format(product_id)
 
+    headers = {
+        "User-Agent": ua.random,
+        "Accept": "application/json",
+    }
+
+
     async with SEM:
         for attempt in range(retries):
             try:
                 async with session.get(
-                    url,
-                    headers=HEADERS,
-                    timeout=5
+                        url,
+                        headers=headers,
+                        timeout=REQUEST_TIMEOUT
                 ) as response:
 
                     if response.status == 200:
